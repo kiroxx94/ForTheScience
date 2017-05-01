@@ -19,9 +19,10 @@ public class PlayerController : MonoBehaviour {
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+      //  Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-        if (Physics.Raycast(transform.position, fwd, out hit, rayLength))
+
+        if (Physics.Raycast(ray, out hit, rayLength))
         {
             if (hit.collider.gameObject.CompareTag("Object"))
             {
