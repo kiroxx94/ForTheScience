@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
@@ -24,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit, rayLength))
         {
-            if (hit.collider.gameObject.CompareTag("Object"))
+            if (hit.collider.gameObject.CompareTag("Item"))
             {
                 objectInRay = hit.collider.gameObject;
             }
@@ -58,7 +56,8 @@ public class PlayerController : MonoBehaviour {
             }
             catch (Exception e)
             {
-               // print(e);
+                // print(e); 
+                
             }
         }
     }
