@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Dialog {
 
-    [XmlElement("Author")]
+    [XmlElement("author")]
     public string author;
 
     [XmlElement("timer")]

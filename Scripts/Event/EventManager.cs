@@ -6,15 +6,15 @@ using UnityEngine;
 public class EventManager: MonoBehaviour {
 
     public EventType eventType;
-    public Status status;
+    private Status status;
     public LayerMask targetMask;
 
-    private Talker talker;
+    private DialogManager dialogManager; 
 
-    
+
     public void Start()
     {
-        talker = GetComponent<Talker>();
+        dialogManager = GetComponent<DialogManager>();
     }
 
 
@@ -29,9 +29,9 @@ public class EventManager: MonoBehaviour {
     {
         var result = targetMask == (targetMask | (1 << other.gameObject.layer));
         if (result) {
-            if (eventType == EventType.Talker && talker && status == Status.Pending)
+            if (eventType == EventType.DialogManager && dialogManager && status == Status.Pending)
             {
-                talker.play();
+                dialogManager.play();
             }
         }
     }
