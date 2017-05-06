@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Life, Energy, Money };
 
 
 public class ConsumableItem : MonoBehaviour, Item

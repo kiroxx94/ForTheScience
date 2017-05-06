@@ -60,4 +60,17 @@ public class FieldOfView : MonoBehaviour
         }
         return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
+
+    public GameObject getTarget()
+    {
+        
+        return visibleTargets != null && visibleTargets.Count > 0 ? visibleTargets[0].gameObject : null ;
+    }
+
+    public void setTargetMask(LayerMask newLayer)
+    {
+        this.targetMask = newLayer;
+    }
+
+   
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DialogCollection>
+    <Dialogs>
+        <Dialog>
+            <author>Arnaud</author>
+            <timer>5</timer>
+            <text>salut je m'appelle arnaud</text>
+        </Dialog>
+        <Dialog>
+            <author>Sandy</author>
+            <timer>3</timer>
+            <text>Ferme ta gueule !!! </text>
+        </Dialog>
+    </Dialogs>
+</DialogCollection>
